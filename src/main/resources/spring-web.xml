@@ -22,13 +22,13 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
         <!--<property name="url" value="jdbc:postgresql://students.kiv.zcu.cz:5432/db2_vyuka" />
         <property name="username" value="db2_vyuka" />
         <property name="password" value="db2_vyuka" /> -->
-        <property name="url" value="jdbc:postgresql://ec2-54-217-215-71.eu-west-1.compute.amazonaws.com:5432/d35acpk365ek1i?ssl=true" />
-        <property name="username" value="spajmwntjfkmvz" />
-        <property name="password" value="uVnxBEcavIJ5CUM4Rn_FEbX5vN" />
+        <property name="url" value="jdbc:hsqldb:mem:testdb" />
+        <property name="username" value="sa" />
+        <property name="password" value="" />
 	</bean>
 
 	<!-- Hibernate session factory -->
@@ -37,8 +37,8 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
         <property name="dataSource" ref="dataSource" />
         <property name="hibernateProperties">
 			<props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
                 <prop key="autocommmit">true</prop>
                 <prop key="hibernate.cfgfile">/hibernate.cfg.xml</prop>
 			</props>

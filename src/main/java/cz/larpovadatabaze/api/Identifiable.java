@@ -1,5 +1,6 @@
 package cz.larpovadatabaze.api;
 
+
 import java.io.Serializable;
 
 /**

@@ -1,0 +1,45 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <!--
+    This Panel shows List of comments. Everything about comment is shown and the
+    full text of the comment.
+    It is found in https://github.com/CSLD/CSLD/tree/master/src/main/java/cz/larpovadatabaze/components/panel/game/CommentsListPanel.html
+    Code - cz.larpovadatabaze.components.panel.game.CommentsListPanel.html
+    -->
+    <div wicket:id="commentList" class="komentar">
+        <!-- Beginning of repetitive part for every comment-->
+        <table>
+            <tbody>
+            <tr>
+                <td class="bunkaObrazek">
+                    <img wicket:id="authorsAvatar" class="obrazekUziv" alt=""><br>
+
+                    <div wicket:id="commentDate" class="datum">2013-07-31</div>
+                </td>
+                <td class="bunkaKomentar">
+                    <wicket:container wicket:id="commentHiddenButton" />
+                    <a wicket:id="authorsDetail">
+                        <span wicket:id="authorsNick" class="nick">Bedus</span>
+                        <span wicket:id="authorsName" class="jmeno">Tereza Bednarska</span>
+                    </a>
+                    <span wicket:id="showGame">
+                        <wicket:message key="comment.aboutGame">o hře</wicket:message>
+                        <div wicket:id="gameRating" class="ctverecek"></div>
+                        <a wicket:id="gameDetail">
+                            <span wicket:id="gameName"></span>
+                        </a>
+                    </span>
+
+                    <div wicket:id="commentsContent" class="obsahKomentar">Síla bratrství byl můj první komorní larp. A
+                        stále ve mě rezonuje jako
+                        jeden z nejlepších komoráků, které jsem dosud měla tu čest hrát. Pohlcující tíživá atmosféra,
+                        beznadějné osudy postav... Odnesla jsem si opravdu silný prožitek a trvalo mi docela dlouho, než
+                        jsem se z toho setřepala :) Dobře fungovala i forma hry, nebyla tam žádná hluchá místa a scény
+                        navazovaly přirozeně a nenásilně. Skvělá byla taky podkresová hudba. Opravdu doporučuji! :)
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- End of repetitive part for every comment-->
+    </div>
+</wicket:panel>

@@ -1,0 +1,44 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <!--
+    It shows basic information about Group.
+    It is found in https://github.com/CSLD/CSLD/tree/master/src/main/java/cz/larpovadatabaze/components/panel/group/GroupDetailPanel.html
+    Code - cz.larpovadatabaze.components.panel.group.GroupDetailPanel.html
+    -->
+    <table>
+        <tr>
+            <td>
+                <img wicket:id="groupImage" class="obrazekUzivatel">
+            </td>
+            <td class="bunkaUzivatel">
+                <div class="jmenoUzivatel">
+                    <span wicket:id="name"></span>
+                </div>
+                <div class="popisek">
+                    Tvůrci <span wicket:id="organized"></span> larpů
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="obsah">
+        <h2><wicket:message key="group.authorsOf">Autoři ve skupině</wicket:message></h2>
+        <table wicket:id="groupAuthors">
+            <tr>
+                <td>
+                    <a wicket:id="link"><span wicket:id="nickname"></span> <span wicket:id="name"></span></a>
+                </td>
+            </tr>
+        </table>
+
+        <wicket:enclosure child="groupAdministrators">
+            <h2><wicket:message key="group.administrators">Administrátoři skupiny</wicket:message></h2>
+            <table wicket:id="groupAdministrators">
+                <tr>
+                    <td>
+                        <a wicket:id="link"><span wicket:id="nickname"></span> <span wicket:id="name"></span></a>
+                    </td>
+                </tr>
+            </table>
+        </wicket:enclosure>
+    </div>
+</wicket:panel>

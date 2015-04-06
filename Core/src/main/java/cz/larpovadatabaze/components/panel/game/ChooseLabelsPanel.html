@@ -1,0 +1,21 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <!--
+    It shows all Labels and allows any amount of them to be chosen.
+    It is possible to get chosen labels from this panel.
+    It is found in https://github.com/CSLD/CSLD/tree/master/src/main/java/cz/larpovadatabaze/components/panel/game/ChooseLabelsPanel.html
+    Code - cz.larpovadatabaze.components.panel.game.ChooseLabelsPanel.html
+    -->
+    <div id="labelsChooserPanel">
+        <div wicket:id="requiredLabels" class="cmpGameLabelContainer">  <!-- This contains list of Labels. -->
+            <input type="button" class="cmpGameLabel" wicket:id="name" />
+            <div class="tooltip" wicket:id="tooltip"></div>
+        </div>
+        <span id="labelsRequiredText"><wicket:message key="label.required">Požadované</wicket:message></span>
+        <div style="clear:both;height:5px;"></div>
+
+        <div wicket:id="otherLabels" class="cmpGameLabelContainer">  <!-- This contains list of Labels. -->
+            <input type="button" class="filtrovatButton cmpGameLabel" wicket:id="name"/>
+            <div class="tooltip" wicket:id="tooltip"></div>
+        </div>
+    </div>
+</wicket:panel>

@@ -4,8 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cz.larpovadatabaze</groupId>
     <artifactId>CSLD</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>REST</module>
+        <module>Core</module>
+    </modules>
     <name>ČSLD</name>
     <repositories>
         <repository>

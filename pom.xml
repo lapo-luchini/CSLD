@@ -7,8 +7,9 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>REST</module>
+        <module>Identity</module>
         <module>Core</module>
+        <module>Calendar</module>
     </modules>
     <name>ČSLD</name>
     <repositories>

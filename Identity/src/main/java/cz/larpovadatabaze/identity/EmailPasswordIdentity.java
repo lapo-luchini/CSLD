@@ -1,9 +1,5 @@
 package cz.larpovadatabaze.identity;
 
-import cz.larpovadatabaze.api.GenericDAO;
-import cz.larpovadatabaze.entity.User;
-import cz.larpovadatabaze.store.Store;
-import org.hibernate.Criteria;
 import org.hibernate.criterion.DetachedCriteria;
 
 /**

@@ -23,13 +23,11 @@ import java.util.List;
  * Created by Balda on 18. 7. 2015.
  */
 public class FacebookLoginPanel extends Panel {
-    private static final Log log = LogFactory.getLog(SimplePanel.class);
     private WebMarkupContainer fbloginDiv;
     private Label fblogin;
 
-    public SimplePanel(String id) {
+    public FacebookLoginPanel(String id) {
         super(id);
-        // TODO Auto-generated constructor stub
     }
 
     /**

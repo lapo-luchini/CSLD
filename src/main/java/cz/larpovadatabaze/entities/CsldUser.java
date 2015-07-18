@@ -20,6 +20,8 @@ import java.util.List;
 @Entity
 public class CsldUser implements Serializable, Identifiable, IAutoCompletable, IEntityWithImage {
     private Integer id;
+    private boolean facebook;
+    private long facebookId;
 
     @Column(
             name = "id",
@@ -332,5 +334,21 @@ public class CsldUser implements Serializable, Identifiable, IAutoCompletable, I
         emptyUser.setRole(CsldRoles.USER.getRole());
         emptyUser.setUserHasLanguages(new ArrayList<UserHasLanguages>());
         return emptyUser;
+    }
+
+    public void setFacebook(boolean facebook) {
+        this.facebook = facebook;
+    }
+
+    public boolean isFacebook() {
+        return facebook;
+    }
+
+    public void setFacebookId(long facebookId) {
+        this.facebookId = facebookId;
+    }
+
+    public long getFacebookId() {
+        return facebookId;
     }
 }

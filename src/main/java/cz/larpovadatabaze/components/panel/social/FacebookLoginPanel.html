@@ -1,0 +1,27 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <!-- facebook api as of 8/11/09 -->
+    <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
+
+    <!-- function for facebook to execute on login-->
+    <script type="text/javascript" wicket:id="fbcallback">
+        function callWicket() {
+            var wcall = wicketAjaxGet('$url$' + '$args$', function() { }, function() { });
+        }
+    </script>
+
+    <div id="loginform">
+        <div wicket:id="fbloginDiv" style="display:none;">
+            <span wicket:id="fblogin">
+             
+            <!-- facebool login button -->
+            <fb:login-button onlogin='callWicket();'></fb:login-button>
+            </span>
+
+            <!-- facebook api -->
+            <script type="text/javascript">
+                FB.init("your-api-key", "/xd_receiver.htm");
+            </script>
+        </div>
+    </div>
+
+</wicket:panel>
